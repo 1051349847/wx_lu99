@@ -1,0 +1,24 @@
+<view class="container" style='margin-top:{{navH+46}}px; min-height:{{navW}}px;' hidden="{{!loadingHidden}}">
+    <s-navbar pageName="空间管理" showBack="{{true}}"></s-navbar>
+
+    <s-space-grid grid="{{grid}}" is_manager="{{is_manager}}" open-type="share"></s-space-grid>
+
+    <view class="select-space">
+
+        <view class="items" style="border-bottom: 1px solid #F0F2F8;">
+            <text class="title"> 群空间名称</text>
+            <text class="con-text">2018级A1班</text>
+        </view>
+        <view class="items" bindtap="onChangeBg">
+            <text class="title">设置班级空间背景图</text>
+            <image class="right-k" src="/img/arrow@right.png"></image>
+        </view>
+
+    </view>
+
+    <view class="delete-space" wx:if="{{is_manager}}" bindtap="onZhuan">
+        <text>转让管理权限给群成员</text>
+    </view>
+        <view class="del" bindtap="exitSpace">删除并退出该空间</view>
+
+</view>

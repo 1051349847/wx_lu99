@@ -1,0 +1,43 @@
+/* pages/register/parent/custom/index.wxss */
+.submit{
+    background-color: #43C2D5;
+    color: #ffffff;
+    font-size: 32rpx;
+    font-weight: 500;
+    border-radius: 40rpx;
+    width: 610rpx;
+    position: absolute;
+    bottom: 120rpx;
+    left: 80rpx;
+
+}
+.submit::after {
+    border: 0;
+    margin: 0;
+}
+.form-student{
+    background-color: #fff;
+    margin-top: 20rpx;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 120rpx;
+    box-sizing: border-box;
+    position: relative;
+}
+.content{
+    background-color: #F0F2F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.test{
+    color: #333333 !important;
+    margin-top: 20rpx;
+    background-color:#ffffff !important;
+}

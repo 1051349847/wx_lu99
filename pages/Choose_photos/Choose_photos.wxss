@@ -1,0 +1,71 @@
+/* pages/Shielding_photos/Shielding_photos.wxss */
+
+.phonto_title {
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  color: rgb(153, 153, 153);
+  padding: 25rpx 30rpx;
+  justify-content: space-between;
+}
+.phonto_title span{
+  color: rgb(47,170,193);
+}
+
+.phonto_title image {
+  display: block;
+  width: 34rpx;
+  height: 28rpx;
+}
+.select_but{
+  color: rgb(47,170,193);
+  font-weight: 700;
+}
+
+.phont_date {
+  padding: 0 20rpx 0 15rpx;
+}
+
+.select-icon {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.grid-item {
+  height: 248rpx;
+  position: relative;
+}
+
+.selectBox {
+  position: absolute;
+  z-index: 999;
+  right: 2rpx;
+  top: 2rpx;
+}
+
+.checked {
+  color: #3eace2;
+  background: rgba(49, 165, 253, 0.08);
+}
+
+.img {
+  width: 242rpx;
+  height: 242rpx;
+}
+
+.grid {
+  width: 100%;
+}

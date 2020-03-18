@@ -1,0 +1,37 @@
+.pay-result{
+    margin: 60rpx 0;
+    text-align: center;
+}
+.pay-result image{
+    width: 200rpx;
+    height: 200rpx;
+}
+.pay-result view{
+    font-size: 40rpx;
+    color: #000;
+    margin-top: 20rpx;
+}
+
+.pay-result .callback_but view{
+    margin: 100rpx auto;
+}
+.callback_but{
+  display: flex;
+  justify-content: space-around
+}
+.callback_but view{
+  font-size: 30rpx;
+  width: 260rpx;
+  border-radius: 50rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.primary_{
+  background: #fff;
+  color: rgb(85,85,85);
+  border: 1px solid rgb(85,85,85);
+}
+.primary{
+  color: rgb(67,194,213) !important;
+  border: 1px solid rgb(67,194,213);
+}

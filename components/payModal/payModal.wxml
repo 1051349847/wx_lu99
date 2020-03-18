@@ -1,0 +1,19 @@
+<!--pages/components/payModal/payModal.wxml-->
+<view class='c-modal' wx:if='{{showModal}}'>
+  <view class='modalConatiner'>
+    <view class='modal-item'>
+      <text>当前拥有米粒：{{alljifen}}</text>
+    </view>
+    <view class='modal-item'>
+      <text>米粒抵扣后需付款：{{zhehoujia}}元</text>
+    </view>
+    <view class='modal-item'>
+      <label>抵扣数量</label>
+      <input placeholder='请输入抵扣数量' confirm-type='done' value='{{iptval}}' type='number' bindblur='inputValue'></input>
+    </view>
+    <view class='modal-foot'>
+      <view class='foot-cancel foot-item click' catchtap='cancel'>取消</view>
+      <view class='foot-confirm foot-item click' catchtap='confirm'>确定</view>
+    </view>
+  </view>
+</view>

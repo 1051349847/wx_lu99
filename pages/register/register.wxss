@@ -1,0 +1,79 @@
+.r-people{
+    width: 200rpx;
+    height: 100%;
+    border-radius: 50%;
+    margin-bottom: 20rpx;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.header{
+    width: 100%;
+    height: 280rpx;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.header>text{
+    margin-left: 40rpx;
+}
+
+.x-title{
+    font-size: 50rpx;
+    color: rgb(67,194,213);
+    margin-bottom: 30rpx;
+}
+
+.x-summery{
+    font-size: 28rpx;
+    color: #8c8c8c;
+}
+
+.content-1{
+    width: 100%;
+    height: 300rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.content-2{
+    width: 100%;
+    height: 400rpx;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+.content-2>view{
+    width: 100%;
+    height: 400rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-2>image{
+    margin: 40rpx;
+}
+
+.student{
+    border: 1px solid #FFB400 !important;
+    color: #FFB400 !important;
+}
+
+.button-user{
+    width: 750rpx;
+    height: 100%;
+    position: fixed;
+    bottom: 1px;
+    right: 1px;
+
+}

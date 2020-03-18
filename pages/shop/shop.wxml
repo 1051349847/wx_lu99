@@ -1,0 +1,40 @@
+
+<view class="container" style='margin-top:{{navH+46}}px;' hidden="{{!loadingHidden}}">
+    <s-navbar pageName="我要做照片书" showBack="{{true}}"></s-navbar>
+
+    <swiper class="swiper-banner" indicator-dots indicator-active-color="#F5F5F5" interval="3500" duration="600" circular autoplay>
+        <block wx:for="{{product.banner.items}}" wx:key="index">
+            <swiper-item>
+                <image class="home-banner" src="{{item.img.img_url}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+
+
+
+    <view class="product-list">
+        <block wx:for="{{product.products}}" wx:key='_this_'>
+            <l-card  type="primary"
+                     l-img-class="right-card"
+                     position="{{index%2 ===0 ?'right':'left'}}"
+                     l-class="card"
+                     image="{{item.main_img_url}}"
+                     title="{{item.name}}">
+                <view class="content">
+                    <text class="description">
+                        {{item.summary}}
+                    </text>
+
+                    <view class="content-bottom">
+                        <text>￥{{item.price}}</text>
+                        <view bindtap="onProductTap" data-id="{{item.id}}">我要定制</view>
+                    </view>
+                </view>
+            </l-card>
+        </block>
+
+    </view>
+
+
+
+</view>

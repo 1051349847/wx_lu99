@@ -1,0 +1,21 @@
+<!--pages/login/data/data.wxml-->
+<view class="container" style='margin-top:{{navH+46}}px;'>
+
+  <view class="header">
+    <view class="x-title">欢迎来到鹿久久</view>
+    <view class="x-summery">
+      <view>在这里，选择你想建立的空间，</view>
+      <view>可以和大家 一起上传和下载照片，永久保存</view>
+    </view>
+  </view>
+
+  <view class="content-1"  bindtap="school">
+    <image src="http://qiniu.029tulingling.com/2020/2/16/600.4604030420195"></image>
+    <view class="title_but">学校班级</view>
+  </view>
+
+  <view class="content-2"  bindtap="other">
+    <image src="http://qiniu.029tulingling.com/2020/2/16/600.4604030420195"></image>
+    <view class="title_but title_but_2">其他空间</view>
+  </view>
+</view>

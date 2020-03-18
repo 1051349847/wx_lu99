@@ -1,0 +1,25 @@
+<view class="container" style='margin-top:{{navH+46}}px; min-height:{{navW}}px;' hidden="{{!loadingHidden}}">
+    <s-navbar pageName="空间管理" showBack="{{true}}"></s-navbar>
+
+
+
+    <view class="select-space">
+        <block wx:for="{{grid}}">
+
+
+                <view class="items" bindtap="onChange" data-id="{{item.user.id}}">
+
+                    <image class="c-left" src="{{item.user.avatar_url}}"></image>
+
+                    <view class="c-right">
+                        <text class="title">{{item.user.name}}</text>
+                        <text wx:if="{{item.user.type === 1}}" class="description">学生</text>
+                        <text wx:else class="description">{{item.user.name}}{{item.user.appellation}}</text>
+                    </view>
+
+                </view>
+        </block>
+    </view>
+
+
+</view>

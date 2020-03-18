@@ -1,0 +1,26 @@
+<!--pages/components/navbar/navbar.wxml-->
+<view class='custom-navbar {{showBg?"nav-bg":""}}' style='height:{{navH+46}}px'>
+  <view class='custom-navbar-top nav-bg' style='height:{{navH}}px'></view>
+  <view class='custom-navbar-bottom {{showBg?"nav-bg":""}}' wx:if='{{showBottom}}'>
+    <block wx:if="{{showDefault}}">
+      <view class='custom-back' wx:if="{{showBack}}" bindtap="toBack">
+        <image src='back.png'></image>
+      </view>
+
+      <view class='custom-back' wx:if="{{showIndex}}" bindtap="toIndex">
+        <image src='back.png'></image>
+      </view>
+      <view class='custom-title'>
+        <label class='ellipsis line-1'>{{pageName}}</label>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='custom-back custom-circle' wx:if="{{showBack}}" bindtap="toBack">
+        <image src='back.png'></image>
+      </view>
+      <!-- <view class='custom-title'>
+      {{pageName}}
+    </view> -->
+    </block>
+  </view>
+</view>

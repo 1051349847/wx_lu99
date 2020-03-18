@@ -1,0 +1,41 @@
+<view class="container" style='margin-top:{{navH+46}}px;'>
+  <s-navbar pageName="我的订单" showBack="{{true}}"></s-navbar>
+  <view class='order-container'>
+      <l-search-bar l-class="search" bg-color="rgba(233, 236, 242, 1)" show-cancel="{{false}}" placeholder="按商品名搜索" bind:linclear="onClearTap" clear bind:linchange='InputChange' bind:linblur='linblur' bind:lincancel="onCancel"  bind:linconfirm='Order_search'/>
+ 
+    <view class="null-text" wx:if="{{myOrderList.length<1}}">
+      您还没有相关订单哦!
+    </view>
+    <block wx:for="{{myOrderList}}" wx:key="index">
+      <view class='order-item order-main' catchtap="orde_detail" data-id="{{item.id}}">
+        <view class='order-top'>
+          <view class='order-no'>订单编号：{{item.order_no}}</view>
+          <!-- <image class="icon-del" src="/img/my/delete2.png"></image> -->
+        </view>
+        <view class='order-bottom'>
+          <image class="img-thumb" src="{{item.snap_img}}"></image>
+          <view class="summery-content">
+            <text class="snap_name">{{item.snap_name}}</text>
+            <text class="designer">设计师：{{item.design_by}}</text>
+            <!-- <text class="color_">颜色：黄色</text> -->
+          </view>
+          <view>
+            <!-- complete_T -->
+            <view wx:if='{{item.status==1}}' class="category complete">待付款</view>
+            <view wx:if='{{item.status==2}}' class="category complete">已支付</view>
+            <view wx:if='{{item.status==3}}' class="category complete">已发货</view>
+            <view wx:if='{{item.status==4}}' class="category complete_T">已完成</view>
+            <view class='order-pay-button gopay' catchtap="rePay" data-id="{{item.id}}" data-index="{{index}}" wx:if="{{item.status==1}}">去付款</view>
+            <view class='order-pay-button confirm gopay_t' catchtap="receipt" data-id="{{item.id}}" data-index="{{index}}" wx:if="{{item.status==2}}">待发货</view>
+            <view class='order-pay-button confirm gopay_t' catchtap="receipt" data-id="{{item.id}}" data-index="{{index}}" wx:if="{{item.status==3}}">确认收货</view>
+            <view class='order-pay-button confirm gopay_t' catchtap="receipt" data-id="{{item.id}}" data-index="{{index}}" wx:if="{{item.status==4}}">再次购买</view>
+          </view>
+          <!-- <view class='order-pay-button gopay' bindtap="rePay" data-id="{{item.id}}" data-index="{{index}}" wx:if="{{item.status==1}}">去付款</view>
+                        <view class='order-pay-button confirm' bindtap="receipt" data-id="{{item.id}}" data-index="{{index}}" wx:if="{{item.status==2}}">确认收货</view> -->
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+</view>

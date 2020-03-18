@@ -1,0 +1,105 @@
+/* pages/image/index.wxss */
+.content {
+    margin-bottom: 150rpx;
+}
+
+.bottom{
+    height: 98rpx;
+    position: fixed;
+    width: 750rpx;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 1rpx solid #F0F2F8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+.video{
+    width: 750rpx;
+
+}
+
+.select-icon{
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    right: 10rpx;
+    top: 10rpx;
+}
+.bottom-ct{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* width: 200rpx; */
+    height: 100%;
+    font-size: 26rpx;
+    color: #555555;
+}
+.bottom-ct image{
+    width: 40rpx;
+    height: 42rpx;
+}
+
+.bottom-ct text{
+    margin-left: 10rpx;
+    font-size: 26rpx;
+    color: #555555;
+}
+.description{
+    width: 750rpx;
+    height: 100rpx;
+    padding-left: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.description text{
+    font-size: 32rpx;
+    color: #555555;
+}
+
+
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.grid-item {
+    height: 248rpx;
+    position: relative;
+    margin-bottom: 10rpx;
+}
+.selectBox{
+    position: absolute;
+    z-index: 999;
+    right: 2rpx;
+    top: 2rpx;
+
+}
+
+.checked{
+    color: #3eace2;
+    background: rgba(49,165,253,0.08);
+
+}
+
+.img {
+    width: 254rpx;
+    height: 254rpx;
+    display: block;
+    
+
+}
+.grid{
+    width: 100%;
+}

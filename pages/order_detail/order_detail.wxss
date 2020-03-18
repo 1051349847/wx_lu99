@@ -1,0 +1,146 @@
+/* pages/order_detail/order_detail.wxss */
+
+page {
+  background-color: #f0f2f8;
+}
+
+.content_T {
+  padding: 0 30rpx;
+  background: #fff;
+}
+
+.detail_title {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 0;
+}
+
+.Serial_number {
+  color: rgb(85, 85, 85);
+  font-size: 30rpx;
+}
+
+.state {
+  color: rgb(67, 194, 213);
+  font-size: 24rpx;
+}
+
+.order_det {
+  padding: 20rpx 0;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+
+.det_left {
+  display: flex;
+}
+
+.order_img image {
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.order_info {
+  margin-left: 20rpx;
+}
+
+.order_name {
+  color: rgb(85, 85, 85);
+  font-size: 30rpx;
+  margin: 10rpx 0 20rpx 0;
+}
+
+.order_ {
+  color: rgb(153, 153, 153);
+  font-size: 24rpx;
+}
+
+.order_money {
+  display: flex;
+  align-items: center;
+  color: rgb(85, 85, 85);
+  font-size: 30rpx;
+}
+
+.order_in {
+  margin-top: 20rpx;
+  padding: 40rpx 30rpx;
+  background: #fff;
+  color: rgb(153, 153, 153);
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+.order_addres{
+   margin-top: 20rpx;
+  padding: 40rpx 30rpx;
+  background: #fff;
+  color: rgb(153, 153, 153);
+}
+.order_addres_cont{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.order_addres_cont image{
+  display: block;
+  width: 28rpx;
+  height: 32rpx;
+}
+.customer_name{
+  margin: 0 60rpx 0 15rpx;
+  font-size: 28rpx;
+}
+.customer_phone{
+    font-size: 28rpx;
+}
+.customer_addres{
+  font-size: 24rpx;
+  padding-left: 40rpx;
+}
+.Amount_goods{
+ 
+   margin-top: 20rpx;
+  padding: 40rpx 30rpx;
+  background: #fff;
+}
+.amount{
+  display: flex;
+  justify-content: space-between;
+}
+.amount_T, .amount_number{
+  color: rgb(85,85,85);
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+.amount_{
+  padding-bottom: 30rpx;
+}
+.Real_payment{
+  padding-top: 30rpx;
+  border-top: 1px solid #ddd;
+  text-align: right;
+  color:rgb(85,85,85);
+  font-size: 28rpx;
+
+}
+.Real_payment span{
+  color: rgb(255,111,142);
+}
+.Once_buy{
+/* position: fixed; */
+/* bottom: 100rpx;
+left: 10%; */
+text-align: center;
+width: 80%;
+height: 80rpx;
+line-height: 80rpx;
+border-radius: 30rpx;
+background: linear-gradient(to right, rgb(83,205,220), rgb(51,183,206));
+color: #fff;
+font-size: 26rpx;
+margin: 40rpx auto;
+
+  
+}

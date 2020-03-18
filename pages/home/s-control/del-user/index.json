@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "l-slide-view":"/dist/slide-view/index"
+  }
+}

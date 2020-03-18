@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "l-grid": "/dist/grid/index",
+    "l-grid-item": "/dist/grid-item/index"
+  }
+}

@@ -1,0 +1,25 @@
+<view class="container" hidden="{{!loadingHidden}}">
+    <s-navbar pageName="自定义" showBack="{{true}}"></s-navbar>
+
+    <view class="content" style="margin-top: {{navH+44}}px; height: {{screenH-88}}px">
+        <form bindsubmit="formSubmit" class="form-student">
+
+            <l-input name="name" placeholder="" hide-label="{{true}}" width="750" l-class="test"/>
+            <button formType="submit" class="submit">提交信息</button>
+        </form>
+
+
+
+    </view>
+
+
+
+
+
+
+
+</view>
+
+<loading hidden="{{loadingHidden}}">
+    加载中...
+</loading>

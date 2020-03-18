@@ -1,0 +1,37 @@
+<!--pages/notify/detail/index.wxml-->
+<!--pages/notify/index.wxml-->
+<view class="container" style='margin-top:{{navH+46}}px; min-height:{{navW}}px;' hidden="{{!loadingHidden}}">
+    <s-navbar pageName="消息中心" showBack="{{true}}"></s-navbar>
+
+
+
+
+    <view class="select-space">
+
+
+
+            <view class="items" bindtap="onChange" data-id="{{detail.user.id}}">
+
+
+                    <text class="title">{{detail.notify.create_time}}</text>
+
+                    <text class="description">{{detail.content}}</text>
+
+
+                <view wx:if="{{detail.result}}" class="c-bottom">
+                    {{detail.result}}
+                </view>
+
+                <view wx:else class="c-bottom">
+                    <l-button shape="semicircle" bg-color="#43C2D5" width="260" height="70" bind:lintap="allow">通过申请</l-button>
+                    <l-button l-class="button-right" shape="semicircle" width="260" height="70" plain="{{true}}">驳回申请</l-button>
+                </view>
+
+
+            </view>
+
+    </view>
+
+
+
+</view>

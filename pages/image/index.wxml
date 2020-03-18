@@ -1,0 +1,84 @@
+<view class="container" hidden="{{!loadingHidden}}">
+  <s-navbar pageName="相集" showBack="{{true}}"></s-navbar>
+
+  <view class="content" style='margin-top:{{navH+46}}px;'>
+
+    <block wx:if="{{!video_url}}">
+
+
+      <view class="description">
+        <text>{{images.description}}</text>
+      </view>
+
+
+      <!--图片列表-->
+
+      <!--<s-category-grid  grid="{{grid}}" change="{{change}}"></s-category-grid>-->
+
+      <view class="container">
+
+        <l-grid l-class="grid" style="width: 100%;">
+          <block wx:for="{{grid}}" wx:key="index">
+            <l-grid-item key="{{item.id}}" slot="{{item.id}}" data-selected="{{index}}" data-src="{{item.img_url}}" data-index="{{index}}" data-id="{{item.id}}" bind:linitemtap="{{tabDefault}}">
+              <view class="grid-item {{item.checked?'checkbox checked':'checkbox'}}">
+                <image mode="aspectFill" class="img" src="{{item.img_url}}-thumb"></image>
+                <image class="select-icon" src="{{item.checked?'/img/icon_selected.png':'/img/icon_unselected.png'}}" wx:if="{{tabDefault=='checkbox'}}"></image>
+              </view>
+            </l-grid-item>
+          </block>
+        </l-grid>
+
+      </view>
+
+      <!-- <view class="bottom">
+        <view class="bottom-ct" bindtap="onSelect"><image src="/img/icon_share.png"></image><text>{{tabDefault=='onItemTab'?'选择':'取消'}}</text></view>
+
+        <view class="bottom-ct" bindtap="onEdit"><image src="/img/icon_edit.png"></image><text>编辑</text></view>
+
+    </view> -->
+      <view class="bottom">
+        <view class="bottom-ct" bindtap="onSelect">
+           <image src="/img/icon_edit.png"></image>
+          <text>{{tabDefault=='onItemTab'?'编辑':'取消'}}</text>
+        </view>
+        <view class="bottom-ct">
+          <!-- <image src="/img/icon_edit.png"></image>
+          <text>编辑</text> -->
+          <view bindtap="shieldImages">屏蔽照片</view>
+          <view style="margin:0 10rpx;"  bindtap="deleteImages">删除照片</view>
+          <view  bindtap="saveImgsToBox">保存至照片盒</view>
+        </view>
+      </view>
+
+    </block>
+
+    <block wx:else>
+      <video src="{{video_url}}" autoplay="{{true}}" direction class="video"></video>
+    </block>
+
+
+
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

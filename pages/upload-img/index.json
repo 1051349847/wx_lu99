@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "l-input": "../../dist/input/index"
+  }
+}

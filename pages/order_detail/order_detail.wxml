@@ -1,0 +1,62 @@
+<view class="container my-container" style="height: {{screenH}}px;">
+  <s-navbar pageName="订单详情" showBack="{{true}}"></s-navbar>
+
+  <view style="margin-top: {{navH+44}}px;">
+    <view class="content_T">
+      <view class="detail_title">
+        <view class="Serial_number">订单编号：{{data.order_no}}</view>
+        <view class="state" wx:if='{{data.status==1}}'>待付款</view>
+         <view class="state" wx:if='{{data.status==2}}'>待发货</view>
+          <view class="state" wx:if='{{data.status==3}}'>确认收货</view>
+           <view class="state" wx:if='{{data.status==4}}'>已完成</view>
+      </view>
+      <view class="order_det">
+        <view class="det_left">
+          <view class="order_img">
+            <image src="{{data.snap_img}}"></image>
+          </view>
+          <view class="order_info">
+            <view class="order_name">{{data.snap_name}}</view>
+            <view class="space order_">设计师：{{data.design_by}}</view>
+            <!-- <view class="order_color order_">颜色：{{data.snap_name}}</view> -->
+          </view>
+        </view>
+        <view class="order_money">￥{{data.total_price}}</view>
+      </view>
+    </view>
+    <view class="order_in">
+      <view> 下单时间：{{data.create_time}}</view>
+      <view wx:if='{{data.status !=1}}'>支付方式：微信支付</view>
+      <view wx:if='{{data.status !=1}}'>支付时间：2018-12-27 13:08:20</view>
+      <view wx:if='{{data.status ==3 || data.status ==4}}'>配送方式：{{data.express}}</view>
+      <view wx:if='{{data.status ==3 || data.status ==4}}'>快递单号：111111111</view>
+    </view>
+    <view class="order_addres">
+      <view class="order_addres_cont">
+        <image src="../../img/my/my_order.png"></image>
+        <view class="customer_name">{{data.snap_address.name}}</view>
+        <view class="customer_phone"> {{data.snap_address.mobile}}</view>
+      </view>
+      <view class="customer_addres">{{data.snap_address.province}}{{data.snap_address.city}}{{data.snap_address.country}}{{data.snap_address.detail}}</view>
+    </view>
+    <view class="Amount_goods">
+     <view class="amount">
+        <view class="amount_T">商品数量</view>
+        <view class=" amount_number">{{data.total_count}}</view>
+      </view>
+      <view class="amount">
+        <view class="amount_T">商品总额</view>
+        <view class=" amount_number">￥{{data.total_price}}</view>
+      </view>
+      <view class="amount amount_">
+        <view class="amount_T">运费</view>
+        <view class=" amount_number">￥0</view>
+      </view>
+      <view class="Real_payment">
+        实付款：
+        <span>￥{{data.total_price}}</span>
+      </view>
+    </view>
+    <view class="Once_buy" bindtap="{{data.status==1?'buy':''}}" data-id='{{data.id}}'>{{data.status==1?'去付款':'再次购买'}}</view>
+  </view>
+</view>

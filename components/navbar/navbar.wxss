@@ -1,0 +1,81 @@
+/* pages/components/navbar/navbar.wxss */
+
+.custom-navbar {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.custom-navbar-bottom {
+  width: 100%;
+  height: 125rpx;
+}
+
+.nav-bg {
+/*  background: -webkit-linear-gradient(left, #9FD8F5, #CFEFFF);
+  background: -o-linear-gradient(right, #9FD8F5, #CFEFFF);
+  background: -moz-linear-gradient(right, #9FD8F5, #CFEFFF);
+  background: linear-gradient(to right, #9FD8F5, #CFEFFF);*/
+
+  background-color: #ffffff;
+
+}
+
+.custom-navbar-top {
+}
+
+.custom-back {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 30px;
+  height: 30px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.custom-circle {
+  border-radius: 20rpx;
+  background-color: #8b8b8b;
+}
+
+.custom-back image {
+  margin-left: 8px;
+  width: 11px;
+  height: 20px;
+}
+
+.custom-title {
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-title label {
+  width: 50%;
+  height: 46px;
+  line-height: 46px;
+}
+.ellipsis {
+   color: black;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+.line-1 {
+  -webkit-line-clamp: 1;
+}

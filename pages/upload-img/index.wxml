@@ -1,0 +1,55 @@
+<view class="container" style="height: {{navW}}px+46" hidden="{{!loadingHidden}}">
+  <s-navbar pageName="相集" showBack="{{true}}"></s-navbar>
+
+  <view class='page' style='margin-top:{{navH+46}}px;'>
+    <textarea class='text' placeholder-class="placeholderStyle" bindinput="input" placeholder="为了方便搜索，请添加照片说明。。。" auto-height/>
+    <view class="image_content">
+      <view class='image' wx:for="{{img_url}}" wx:key="index">
+        <image class="moment_img" mode="aspectFill" src="{{item}}"></image>
+        <image class="del_img" bindtap="del_img" data-index='{{index}}' wx:if='{{img_url.length !=0}}' src="../../img/del.png"></image>
+      </view>
+      
+        <view class='image video' wx:for="{{tempFiles}}" wx:key="index">
+          <image class="moment_img" mode="aspectFill" src="{{item.thumbTempFilePath}}"></image>
+          <image src="/img/home/play.png" class="video-play"></image>
+        </view>
+ 
+
+      <view class='image' style='display:{{hideAdd}}' bindtap="chooseMedia">
+        <image mode="aspectFill" class="add_img" src='/img/img_add.png'></image>
+      </view>
+
+    </view>
+    <!--<button bindtap="send" style='margin-right:5px;margin-left:5px'>发布</button>-->
+
+
+    <view class="l_button">
+
+      <l-button bind:lintap="{{send}}" l-class="l_button_text" width="610" type="success" shape="semicircle">上传照片</l-button>
+
+    </view>
+
+
+
+
+  </view>
+
+
+  <view class="b_time">
+    <view class="time_left">
+      <image style="margin-right: 10px;" src="/img/remember_time.png" mode="aspectFill"></image>
+      <text>记录时间</text>
+    </view>
+    <view class="time_right">
+      <picker mode="date" value="{{date}}" start="1900-01-01" end="{{date}}" bindchange="bindDateChange">
+        <text style="margin-right: 20rpx;">{{date}}</text>
+      </picker>
+
+
+      <image src="/img/list_select_path.png"></image>
+    </view>
+  </view>
+
+
+
+</view>

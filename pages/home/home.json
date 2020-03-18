@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "l-water-flow": "/dist/water-flow/index",
+    "l-popup": "/dist/popup/index",
+    "l-loadmore": "/dist/loadmore/index"
+  }
+}

@@ -1,0 +1,45 @@
+<!--pages/login/data/data.wxml-->
+<view class="container" style='margin-top:{{navH+46}}px;'>
+
+<view class="header">
+    <text class="x-title">请选择对应角色</text>
+    <text class="x-summery">以便更好的使用鹿久久呦~</text>
+</view>
+
+    <view class="content-1">
+        <image class="r-people" src="../../img/register/parents.png" mode="widthFix"></image>
+        <l-button type="error" shape="semicircle" plain="{{true}}" bindtap="onParentsTap">我是家长</l-button>
+    </view>
+
+    <view  class="content-2">
+        <view>
+            <image class="r-people" src="../../img/register/teacher.png" mode="widthFix"></image>
+            <l-button type="success" shape="semicircle" plain="{{true}}" bindtap="onTeacherTap">我是老师</l-button>
+        </view>
+
+        <view>
+            <image class="r-people" src="../../img/register/students.png" mode="widthFix"></image>
+            <l-button l-class="student" type="warning" shape="semicircle" plain="{{true}}" bindtap="onStudentsTap">我是学生</l-button>
+        </view>
+
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

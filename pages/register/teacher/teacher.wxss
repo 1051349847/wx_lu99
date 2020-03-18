@@ -1,0 +1,151 @@
+/* pages/register/teacher/teacher.wxss */
+
+.item-role{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+.miowshu{
+    font-size: 24rpx;
+}
+.item-role image{
+    width: 76rpx;
+    height: 102rpx;
+}
+.select-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60rpx;
+}
+
+/* pages/register/students/students.wxss */
+
+.x-title{
+    font-size: 50rpx;
+    color: rgb(67,194,213);
+    margin-left: 75rpx;
+
+}
+.l-button{
+    position: absolute !important;
+    z-index: 999;
+    color: black !important;
+    border: 1rpx solid #333;
+    right: 30rpx;
+    top: 30rpx;
+}
+
+.l-juese{
+    width: 140rpx;
+    height: 50rpx;
+    color: black !important;
+    border: 1rpx solid #333;
+}
+.gunalian{
+    position: absolute;
+    top: 30rpx;
+    color: #555555;
+}
+.content-form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    width: 600rpx;
+    background-color: rgb(255,255,255);
+    border-radius: 25rpx;
+    box-shadow: 0rpx 10rpx 10rpx #CCCCCC;
+}
+.header{
+    width: 750rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30rpx;
+    margin-bottom: 80rpx;
+}
+page{
+    background-color:#F0F2F8;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-student{
+    position: relative;
+}
+.capter{
+    position: absolute !important;
+    z-index: 999;
+    color: #555555 !important;
+    border: 1rpx solid #999999;
+    right: 28rpx;
+    bottom: 220rpx;
+
+
+}
+.test{
+    color: #333333 !important;
+    margin: 15rpx auto;
+
+}
+
+.hhaha{
+    margin-bottom: 80rpx !important;
+
+}
+
+.testlast{
+    margin: 15rpx auto 60rpx auto;
+}
+
+.content-bottom{
+    position: absolute;
+    bottom: -120rpx;
+}
+.submit{
+    background-color: #43C2D5;
+    color: #ffffff;
+    font-size: 32rpx;
+    font-weight: 500;
+    border-radius: 40rpx;
+    width: 610rpx;
+    margin: 0;
+
+}
+.submit::after {
+    border: 0;
+    margin: 0;
+}
+.text-gx{
+    height: 120rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 68rpx;
+    box-sizing: border-box;
+}
+.text-gx text{
+    color: #555555;
+    font-size: 32rpx;
+
+}
+
+.countdown-blue{
+    width: 30rpx !important;
+    height: 52rpx;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 50%;
+    background:transparent !important;
+    color: #555555 !important;
+}

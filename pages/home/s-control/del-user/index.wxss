@@ -1,0 +1,47 @@
+/* pages/home/s-control/index.wxss */
+.items{
+    width: 750rpx;
+    height: 174rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #EDEDED;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+}
+.icon-del{
+    width: 38rpx;
+    height: 38rpx;
+}
+.c-left{
+    width: 114rpx;
+    height: 114rpx;
+    border-radius: 50%;
+
+}
+.right{
+    height: 174rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255,111,142);
+}
+.c-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 550rpx;
+
+}
+
+.title{
+    font-size: 30rpx;
+    color: #555555;
+}
+.description{
+    font-size: 24rpx;
+    color: #797979;
+}

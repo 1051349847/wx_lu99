@@ -1,0 +1,78 @@
+<!--pages/activity/activity.wxml-->
+<import src="../wxParse/wxParse.wxml"/>
+
+<view class="container" style='margin-top:{{navH+46}}px;' hidden="{{!loadingHidden}}">
+
+    <s-navbar pageName="商品详情" showBack="{{true}}"></s-navbar>
+
+
+
+    <swiper class="swiper-banner" indicator-dots indicator-active-color="#F5F5F5" interval="3500" duration="600" circular autoplay>
+        <block wx:for="{{product.banner}}" wx:key="index">
+            <swiper-item>
+                <image class="home-banner" src="{{item.img.img_url}}" mode="aspectFill"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="a_herader">
+        <view class="a_herader_l">
+            <text class="title">{{product.name}}</text>
+            <text class="summary" style="margin-top: 10rpx;">{{product.summary}}</text>
+
+        </view>
+        <view class="a_herader_r" bindtap="onImageSelect">
+            <view class="select-left select">
+                <image class="left-icon" src="/img/product/select_pic.jpg" mode="aspectFill"></image>
+                <text class="summary">选择照片</text>
+            </view>
+
+            <view class="select-right select">
+                <text class="summary">已选择{{curr_arry_length?curr_arry_length:0}}张</text>
+                <image class="right-icon" src="/img/arrow@right.png" mode="aspectFill"></image>
+            </view>
+
+
+
+        </view>
+
+        <view class="a_herader_r" bindtap="onStylistSelect">
+            <view class="select-left select">
+                <image class="left-icon" src="/img/product/select_stylist.jpg" mode="aspectFill"></image>
+                <text class="summary">选择设计师</text>
+            </view>
+
+            <view class="select-right select">
+                <text class="summary">{{s_name}}</text>
+                <image class="right-icon" src="/img/arrow@right.png"></image>
+            </view>
+
+        </view>
+
+    </view>
+
+    <view class="detail-bottom-box">
+
+        <view class="product-detail-box">
+            <view class="product-detail-imgs">
+                <template is="wxParse"  data="{{wxParseData:article.nodes}}" />
+            </view>
+        </view>
+    </view>
+
+    <view class="footer-box">
+
+        <view bindtap="Order_save" data-price="{{price}}" data-id="{{id}}" class="box-title go-cart shares">
+              保存一下
+        </view>
+
+        <view bindtap="gopay" data-price="{{product.price}}" data-id="{{product.id}}" class="box-title buy-now shares">
+            直接下单
+        </view>
+
+    </view>
+
+</view>
+<loading hidden="{{loadingHidden}}">
+    加载中...
+</loading>

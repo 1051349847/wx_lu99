@@ -1,0 +1,55 @@
+page{
+  width: 100vw;
+  
+}
+.header {
+  padding: 0 60rpx;
+}
+
+.x-title {
+  font-weight: 700;
+  color: rgb(84, 191, 203);
+  font-size: 42rpx;
+}
+
+.x-summery {
+  color: rgb(153, 153, 153);
+  font-size: 30rpx;
+  margin-top: 40rpx;
+}
+
+.content-1, .content-2{
+  position: relative;
+  margin-top: 40rpx;
+}
+.title_but{
+  position: absolute;
+  left: 50%;
+  width: 240rpx;
+  margin-left: -150rpx;
+  top: 50%;
+  font-size: 34rpx;
+  color: #fff;
+  border-radius: 50rpx;
+  text-align: center;
+  background: rgb(84, 191, 203);
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: -40rpx;
+}
+.content-1 image {
+  display: block;
+  height: 400rpx;
+  width: 600rpx;
+  margin-left: 40rpx;
+}
+
+.content-2 image {
+  display: block;
+  height: 400rpx;
+  width: 600rpx;
+  margin-left: 40rpx;
+}
+.title_but_2{
+  background: rgb(241,95,130);
+}

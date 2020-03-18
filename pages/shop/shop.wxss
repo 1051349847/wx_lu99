@@ -1,0 +1,55 @@
+/* pages/shop/shop.wxss */
+page{
+    background-color: #F0F2F8;
+}
+.swiper-banner {
+    width: 100%;
+    height: 332rpx;
+
+}
+
+.home-banner{
+    width: 100%;
+    height: 332rpx;
+}
+
+
+.description{
+    font-size: 24rpx;
+    color: #999999;
+}
+
+.content-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rpx;
+
+}
+
+.content-bottom>text{
+margin-right: 20rpx;
+    color: #FF6F8E;
+    font-size: 30rpx;
+}
+
+.content-bottom>view{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(left, rgb(255,157,149), rgb(255,106,141));
+    background: -o-linear-gradient(right, rgb(255,157,149), rgb(255,106,141));
+    background: -moz-linear-gradient(right, rgb(255,157,149), rgb(255,106,141));
+    background: linear-gradient(to right, rgb(255,157,149), rgb(255,106,141));
+    width: 220rpx;
+    height: 60rpx;
+    color: #ffffff;
+    font-size: 28rpx;
+    border-radius: 30rpx;
+}
+.card{
+    margin-bottom: 30rpx !important;
+    border-radius: 20rpx !important;
+}

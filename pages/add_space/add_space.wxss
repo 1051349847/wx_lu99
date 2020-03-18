@@ -1,0 +1,31 @@
+/* pages/add_space/add_space.wxss */
+page{
+  background-color:#F0F2F8;
+}
+.Fill_name{
+  display: flex;
+  background: #fff;
+  padding: 20rpx 0;
+
+
+}
+.Fill_name label{
+  padding:0 20rpx;
+}
+.Fill_name input{
+  flex: 1;
+}
+.submit{
+  position: fixed;
+  bottom: 100rpx;
+  left: 10%;
+  text-align: center;
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+   background: linear-gradient(to right, rgb(83,205,220), rgb(51,183,206));
+  color: #fff;
+  font-size: 26rpx;
+  
+}

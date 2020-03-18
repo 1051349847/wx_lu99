@@ -1,0 +1,20 @@
+<!--地址-->
+<view class="container pay-result-container" style='margin-top:{{navH+46}}px;'>
+  <s-navbar pageName="订单详情" showBack="{{true}}"></s-navbar>
+  <view class="pay-result">
+    <block wx:if="{{payResult=='true'}}">
+      <image src="../../img/icon/pay@success.png"></image>
+      <view>支付成功</view>
+      <view class="callback_but">
+        <view class="primary_" bindtap="viewOrder_ind"> 返回首页 </view>
+        <view class="primary" bindtap="viewOrder"> 查看订单 </view>
+      </view>
+
+    </block>
+    <block wx:else>
+      <image src="../../img/icon/pay@error.png"></image>
+      <view>支付失败</view>
+      <button type="default" bindtap="viewOrder"> 查看订单 </button>
+    </block>
+  </view>
+</view>

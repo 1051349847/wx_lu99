@@ -1,0 +1,27 @@
+<!--pages/home/search/index.wxml-->
+<s-navbar pageName="搜索" showBack="{{true}}"></s-navbar>
+<view class="container" style='margin-top:{{navH+46}}px;' hidden="{{!loadingHidden}}">
+
+    <l-search-bar style="width: 100%;" l-class="search"  focus="true" bg-color="rgba(233, 236, 242, 1)" bind:lincancel="seach_submit"  placeholder="按上传人、事件、活动内容进行搜索" bind:linconfirm='seach_submit'bind:linchange='InputChange' bind:linblur='linblur' value='{{tag_name}}'  bind:linclear="onClearTap" cancel-text='搜索'/>
+    
+    <!-- <view bindtap="seach_submit">搜索</view> -->
+    <block wx:if="{{!result}}">
+        <view class="title">常用标签</view>
+        <view class="search-label">
+            <block wx:for="{{slable}}">
+                <l-tag l-class="l-tag"   shape="circle" bind:lintap='tag_slid' data-id='{{item.id}}' name='{{item.name}}' data-index='{{index}}' bg-color="{{item.select==false?'#E9ECF2':'#E9ECF2'}}" font-color="{{item.select==false?'#797979':'#797979'}}">{{item.name}}</l-tag>
+            </block>
+        </view>
+
+    </block>
+
+    <block wx:else>
+        <view>
+            nihao a a a
+        </view>
+    </block>
+
+  
+
+
+</view>

@@ -1,0 +1,109 @@
+/* pages/box/box.wxss */
+.search{
+    margin-top: 52rpx;
+}
+
+.image-book{
+    position: fixed;
+    width: 324rpx;
+    height: 80rpx;
+    background-color: #FF4F51;
+    background: -webkit-linear-gradient(left, rgb(255,157,149), rgb(255,106,141));
+    background: -o-linear-gradient(right, rgb(255,157,149), rgb(255,106,141));
+    background: -moz-linear-gradient(right, rgb(255,157,149), rgb(255,106,141));
+    background: linear-gradient(to right, rgb(255,157,149), rgb(255,106,141));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    bottom: 50rpx;
+    border-radius: 0px 40px 40px 0px;
+}
+.image-book text{
+   font-size: 24rpx;
+   color: #ffffff;
+
+}
+
+.icon-book{
+    width: 48rpx;
+    height: 40rpx;
+}
+
+.icon-path{
+    width: 14rpx;
+    height: 24rpx;
+    margin-right: 10rpx;
+
+}
+
+.phonto_title {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: rgb(153, 153, 153);
+  padding: 25rpx 30rpx;
+}
+
+.phonto_title image {
+  display: block;
+  width: 34rpx;
+  height: 28rpx;
+}
+
+.phont_date {
+  padding: 0 20rpx 0 15rpx;
+}
+
+.select-icon {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  /* display: flex; */
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.grid-item {
+  /* height: 248rpx; */
+  position: relative;
+  margin-bottom: 6rpx;
+}
+
+.selectBox {
+  position: absolute;
+  z-index: 999;
+  right: 2rpx;
+  top: 2rpx;
+}
+
+.checked {
+  color: #3eace2;
+  background: rgba(49, 165, 253, 0.08);
+ 
+}
+
+.img {
+  width: 185rpx;
+  height: 185rpx;
+  display: block;
+}
+
+.grid {
+  width: 100%;
+}
+.search-input-primary{
+  border-radius: 30rpx !important;
+}
+
+
+

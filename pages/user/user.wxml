@@ -1,0 +1,72 @@
+
+<view class="container my-container" style="height: {{screenH}}px;" hidden="{{!loadingHidden}}">
+    <button wx:if="{{!authorized}}" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class="zhezhao"></button>
+    <s-navbar pageName="我的" showBack="{{false}}"></s-navbar>
+
+  <view class="my-header" style="margin-top: {{navH+44}}px; background-image:url(http://qiniu.bmty123.com/uploads/0121/1579573931000814e.jpg)">
+    <open-data class="imag" type="userAvatarUrl"></open-data>
+  </view>
+    <!-- 白色横条 -->
+<view class="white"></view>
+  <!--列表开始  -->
+  <view class='my-content'>
+      <view class="item-title" bindtap='onCoupon'>
+          <view class='left-k'><image src="../../img/my/my_icon_coupon.png"></image></view>
+          <view class='ziti'>我的免费券
+              <image class='right-k' src="../../img/arrow@right.png"></image>
+          </view>
+      </view>
+
+      <view class="item-title" bindtap='OnTapOrder'>
+          <view class='left-k'><image src="../../img/my/my_order_icon.png"></image></view>
+          <view class='ziti'>我的订单
+              <image class='right-k' src="../../img/arrow@right.png"></image>
+          </view>
+      </view>
+
+     <view class="item-title" bindtap='edit'>
+            <view class='left-k'><image src="../../img/my/list_icon_address.png"></image></view>
+            <view class='ziti'>收货地址
+            <image class='right-k' src="../../img/arrow@right.png"></image></view>
+     </view>
+
+      <view class="item-title top-bar message" bindtap='onNotify'>
+          <view class='left-k'><image src="../../img/my/list_icon_msg.png"></image></view>
+          <view class="prompt" wx:if='{{msg_number!=0}}'>
+                {{msg_number}}
+              </view>
+          <view class='ziti'>消息中心
+              <image class='right-k' src="../../img/arrow@right.png"></image>
+          </view>
+      </view>
+
+        <view class="item-title" bindtap='onNotify_T'>
+             <view class='left-k'><image src="../../img/my/list_icon_shield.png"></image></view>
+             <view class='ziti'>我屏蔽的照片
+                <image class='right-k' src="../../img/arrow@right.png"></image>
+             </view>
+       </view>
+
+      <view class="item-title top-bar" bindtap='onNotify'>
+             <view class='left-k'><image src="../../img/my/list_icon_info.png"></image></view>
+             <view class='ziti'>修改/添加空间信息
+                <image class='right-k' src="../../img/arrow@right.png"></image>
+             </view>
+       </view>
+
+      <view class="item-title" bindtap='onSecurity'>
+             <view class='left-k'><image src="../../img/my/list_icon_safe.png"></image></view>
+             <view class='ziti'>账号和安全
+                <image class='right-k' src="../../img/arrow@right.png"></image>
+             </view>
+       </view>
+
+  </view>
+
+  
+</view>
+
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

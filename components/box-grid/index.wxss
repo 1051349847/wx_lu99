@@ -1,0 +1,24 @@
+/* components/box-grid/index.wxss */
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.grid-item {
+    height: 248rpx;
+}
+
+.grid-item image {
+    width: 246rpx;
+    height: 244rpx;
+
+}
+.grid{
+    width: 100%;
+}

@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "l-search-bar":"/dist/search-bar/index",
+    "s-box-grid": "/components/box-grid/index",
+    "s-navbar": "../../components/navbar/navbar",
+    "l-grid": "/dist/grid/index",
+    "l-grid-item": "/dist/grid-item/index"
+  }
+}

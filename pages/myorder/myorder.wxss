@@ -1,0 +1,100 @@
+page{
+  background-color: #F0F2F8;
+}
+.order-container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction:column;
+}
+.order-item{
+    height: 300rpx;
+    width: 100%;
+    background-color: #ffffff;
+    margin-bottom: 20rpx;
+
+}
+.order-no{
+    font-size: 30rpx;
+    color: #555555;
+    margin-left: 20rpx;
+}
+.order-top{
+    border-bottom: 1px solid #DDDDDD;
+    height: 94rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon-del{
+    width: 36rpx;
+    height: 36rpx;
+    margin-right: 20rpx;
+}
+.img-thumb{
+    width: 140rpx;
+    height: 140rpx;
+    margin-left: 20rpx;
+
+}
+.summery-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 20rpx;
+    width: 300rpx;
+
+}
+.order-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* height: 180rpx; */
+    padding-top: 30rpx;
+}
+.category{
+  text-align: right;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+}
+.complete{
+  color: rgb(255,111,142);
+}
+.complete_T{
+ color: rgb(67,194,213);
+}
+.order-pay-button{
+   margin-left: 90rpx;
+   border-radius: 30rpx;
+   width: 160rpx;
+   height: 60rpx;
+   text-align: center;
+   line-height: 58rpx;
+  font-size: 30rpx;
+}
+.gopay{
+    color: rgb(255,111,142);
+    border: 1px solid rgb(255,111,142);
+    /* border: 1px solid rgb(67,194,213); */
+    /* border: 1px solid rgb(255,111,142); */
+}
+
+
+.confirm{
+    border: 1px solid black;
+}
+.snap_name{
+  color: rgb(85,85,85);
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.designer, .color_{
+  color: rgb(153,153,153);
+  font-size: 24rpx;
+}
+
+.gopay_t{
+  border: 1px solid rgb(67,194,213);
+   color: rgb(67,194,213);
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "s-navbar": "../../components/navbar/navbar",
+    "l-input": "../../dist/input/index"
+  }
+}

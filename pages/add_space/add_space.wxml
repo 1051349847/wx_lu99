@@ -1,0 +1,11 @@
+<view class="container my-container" style="height: {{screenH}}px;">
+  <s-navbar pageName="创建空间" showBack="{{true}}"></s-navbar>
+
+  <view style="margin-top: {{navH+44}}px;">
+    <view class="Fill_name">
+      <label>空间名称</label>
+      <input value="{{space_name}}" bindinput="space_name"></input>
+    </view>
+    <view class="submit" bindtap="submit">确认创建</view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<view class="container" style='margin-top:{{navH+46}}px;'>
+  <s-navbar pageName="选择照片" showBack="{{true}}"></s-navbar>
+
+
+  <view class='shiled_container'>
+    <view>
+      <view class="phonto_title">
+        <!-- <image src="../../img/my/my_icon_date.png"></image>
+        <view class="phont_date">2019.1.1</view>
+        <view>小敏的妈妈</view> -->
+        <view>
+          <span>{{select_count}}</span>/200</view>
+          <view class="select_but" bindtap="select_but">提交</view>
+      </view>
+      <view>
+        <l-grid l-class="grid" style="width: 100%;">
+          <block wx:for="{{grid_}}" wx:key="index">
+            <l-grid-item key="{{item.img_id}}" slot="{{item.img_id}}" data-selected="{{index}}" data-src="{{item.image.img_url}}" data-index="{{index}}" data-id="{{item.img_id}}" bind:linitemtap="{{tabDefault}}">
+              <view class="grid-item {{item.checked?'checkbox checked':'checkbox'}}">
+                <image mode="aspectFill" class="img" src="{{item.image.img_url}}-thumb"></image>
+                <image class="select-icon" src="{{item.checked?'../../img/icon_selected.png':'../../img/icon_unselected.png'}}" wx:if="{{tabDefault=='checkbox'}}"></image>
+              </view>
+            </l-grid-item>
+          </block>
+        </l-grid>
+      </view>
+    </view>
+  </view>
+
+</view>

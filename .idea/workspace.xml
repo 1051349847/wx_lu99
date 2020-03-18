@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c64a57a1-3a93-453f-b537-2b70f8bd6fbe" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Wechat mini program page js file(Page API)" />
+        <option value="Wechat mini program page json file(Page API)" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WEoGYu2FytYeuYPB9Pmd1JYJVQ" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img/my" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WeChatProjects\wxapp-lu99\img\my" />
+      <recent name="D:\WeChatProjects\wxapp-lu99\img" />
+      <recent name="D:\WeChatProjects\wxapp-lu99\img\home" />
+      <recent name="D:\WeChatProjects\wxapp-lu99\img\product" />
+      <recent name="D:\WeChatProjects\wxapp-lu99\img\box" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c64a57a1-3a93-453f-b537-2b70f8bd6fbe" name="Default Changelist" comment="" />
+      <created>1578724012178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578724012178</updated>
+      <workItem from="1578724013263" duration="1000" />
+      <workItem from="1578724021043" duration="9681000" />
+      <workItem from="1578967764916" duration="1036000" />
+      <workItem from="1578968870008" duration="1951000" />
+      <workItem from="1578970836456" duration="1801000" />
+      <workItem from="1578981298852" duration="1264000" />
+      <workItem from="1578984614299" duration="1818000" />
+      <workItem from="1578991448843" duration="552000" />
+      <workItem from="1578992011534" duration="511000" />
+      <workItem from="1578992524157" duration="2042000" />
+      <workItem from="1578999423178" duration="300000" />
+      <workItem from="1579054972116" duration="15295000" />
+      <workItem from="1579141544162" duration="599000" />
+      <workItem from="1579158676874" duration="3040000" />
+      <workItem from="1579320101863" duration="313000" />
+      <workItem from="1579336976331" duration="61000" />
+      <workItem from="1579343492208" duration="1942000" />
+      <workItem from="1579488921747" duration="13766000" />
+      <workItem from="1579573621345" duration="18666000" />
+      <workItem from="1581145749709" duration="9626000" />
+      <workItem from="1581268066733" duration="3199000" />
+      <workItem from="1581309131629" duration="12986000" />
+      <workItem from="1581354730349" duration="6795000" />
+      <workItem from="1581405104985" duration="11625000" />
+      <workItem from="1581490051553" duration="1792000" />
+      <workItem from="1581499477289" duration="188000" />
+      <workItem from="1581500550496" duration="8280000" />
+      <workItem from="1581574775543" duration="21000" />
+      <workItem from="1581574842136" duration="36000" />
+      <workItem from="1581575239262" duration="73000" />
+      <workItem from="1581575319195" duration="633000" />
+      <workItem from="1581581519447" duration="7696000" />
+      <workItem from="1581663773890" duration="599000" />
+      <workItem from="1581675576979" duration="5313000" />
+      <workItem from="1581779793847" duration="840000" />
+      <workItem from="1581850386300" duration="5485000" />
+      <workItem from="1581876811395" duration="6484000" />
+      <workItem from="1581935100265" duration="4680000" />
+      <workItem from="1581997609529" duration="8214000" />
+      <workItem from="1582095863360" duration="3795000" />
+      <workItem from="1582103902595" duration="6874000" />
+      <workItem from="1582182278585" duration="7984000" />
+      <workItem from="1582309193513" duration="1477000" />
+      <workItem from="1582353660950" duration="41000" />
+      <workItem from="1582353708027" duration="460000" />
+      <workItem from="1582354354366" duration="5795000" />
+      <workItem from="1582452644017" duration="1011000" />
+      <workItem from="1582468732884" duration="2834000" />
+      <workItem from="1582513270938" duration="13913000" />
+      <workItem from="1582598418924" duration="2123000" />
+      <workItem from="1582601259859" duration="1682000" />
+      <workItem from="1582688227811" duration="22629000" />
+      <workItem from="1582787680145" duration="3109000" />
+      <workItem from="1582792878619" duration="4654000" />
+      <workItem from="1582866476286" duration="462000" />
+      <workItem from="1582868899138" duration="517000" />
+      <workItem from="1582869446382" duration="5159000" />
+      <workItem from="1583112348038" duration="1029000" />
+      <workItem from="1583113746379" duration="17389000" />
+      <workItem from="1583196808649" duration="15972000" />
+      <workItem from="1583281927316" duration="16388000" />
+      <workItem from="1583373422689" duration="25000" />
+      <workItem from="1583373491336" duration="16625000" />
+      <workItem from="1583460404887" duration="41000" />
+      <workItem from="1583460508620" duration="14536000" />
+      <workItem from="1583547231147" duration="6067000" />
+      <workItem from="1583720476334" duration="5552000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="198" key="#Inspections" timestamp="1578727877663">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="198" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1578727877663" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579593413574">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579593413574" />
+    <state x="586" y="191" key="SettingsEditor" timestamp="1583117813338">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="191" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583117813338" />
+    <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1578992039268" />
+    <state x="616" y="241" key="run.anything.popup" timestamp="1583549076706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="241" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583549076706" />
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1579076483084" />
+    <state x="623" y="226" width="672" height="678" key="search.everywhere.popup" timestamp="1582701018283">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="226" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582701018283" />
+    <state x="623" y="235" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578991704764" />
+  </component>
+</project>

@@ -1,0 +1,37 @@
+<!--pages/notify/index.wxml-->
+<view class="container" style='margin-top:{{navH+46}}px; min-height:{{navW}}px;' hidden="{{!loadingHidden}}">
+  <s-navbar pageName="消息中心" showBack="{{true}}"></s-navbar>
+
+
+
+  <view class="select-space">
+    <block wx:for="{{grid}}">
+
+      <l-slide-view height="174" width="750" slide-width="100" threshold="80" auto-close="true">
+
+        <view slot="left" class="left">
+          <view class="items" bindtap="onRead" data-id="{{item.id}}">
+            <view style="display:flex">
+              <image wx:if="{{item.notify.type === 1}}" class="c-left" src="/img/icon_yq.png"></image>
+              <view class="c-right">
+                <text class="title">{{item.notify.title}}</text>
+                <text class="description">{{item.content}}</text>
+              </view>
+            </view>
+
+            <view class="c-right description">
+              {{item.create_time}}
+            </view>
+
+          </view>
+        </view>
+        <view slot="right" class="right" bindtap="onDelUser" data-id="{{item.id}}">
+           <image class="icon-del" src="/img/home/icon_del.png"></image>
+        </view>
+      </l-slide-view>
+
+    </block>
+  </view>
+
+
+</view>

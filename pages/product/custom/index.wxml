@@ -1,0 +1,28 @@
+<!--pages/product/custom/index.wxml-->
+<view class="container" style='margin-top:{{navH+46}}px;' hidden="{{!loadingHidden}}">
+
+    <s-navbar pageName="选择设计师" showBack="{{true}}"></s-navbar>
+
+
+    <!--图片列表-->
+
+
+    <view class="container">
+
+        <l-grid l-class="grid" style="width: 100%;">
+            <block wx:for="{{images}}" wx:key="{{index}}">
+                <l-grid-item key="{{item.id}}" slot="{{item.id}}" data-index="{{index}}" data-name="{{item.name}}" bind:linitemtap="onItemTab">
+                    <view class="grid-item {{item.checked?'checkbox checked':'checkbox'}}">
+                        <image mode="aspectFill" class="img" src="{{item.top_img_url}}"></image>
+                        <text class="title">{{item.name}}</text>
+                        <text class="summery" style="width: 200rpx;">{{item.description}}</text>
+                        <image class="select-icon" src="{{item.checked?'/img/icon_selected.png':'/img/icon_unselected.png'}}"></image>
+                    </view>
+                </l-grid-item>
+            </block>
+        </l-grid>
+
+    </view>
+
+    <view class="button" bindtap="onSubmit">我喜欢这位</view>
+</view>

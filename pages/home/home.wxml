@@ -1,0 +1,292 @@
+<view class="container" hidden="{{!loadingHidden}}">
+  <!--空间管理 切换空间-->
+  <l-popup show="{{is_show}}" content-align="top">
+    <view class="botton" style='padding-top:{{navH+5}}px;'>
+
+      <view class="showSpaceList" bindtap="hideSpaceList">
+        <text class="change-space" style="color: #000000;">切换空间</text>
+        <image class="top-arrow arrow-up" src="/img/arrow@right.png" mode="widthFix"></image>
+      </view>
+
+      <block wx:if="{{space}}">
+        <!-- <view class="del_space" bindtap="visibleIcon">
+          <text>选择并删除</text>
+          <image src="/img/home/icon_del.png" mode="widthFix"></image>
+        </view> -->
+
+
+        <view class="_title">校园班级</view>
+        <view class="class-list">
+          <block wx:if="{{item.classes.type === 1}}" wx:for="{{space}}" wx:key="index">
+            <view class="class-content" bindtap="onClassTap" data-mid='{{item.classes.manager_id}}' data-id="{{item.class_id}}" data-name="{{item.classes.name}}">
+              <image class="a-img" src="{{item.classes.main_img_url}}"></image>
+              <text>{{item.classes.name}}</text>
+              <image style="display:{{exitStatus}}" bindtap="exitSpace" data-id="{{item.class_id}}" class="exit-icon" src="/img/home/icon_exit.png"></image>
+            </view>
+          </block>
+        </view>
+        <view class="_title">亲友聚会</view>
+        <view class="class-list either-space">
+
+          <block wx:if="{{item.classes.type === 2}}" wx:for="{{space}}" wx:key="index">
+            <view class="class-content" bindtap="onClassTap" data-mid='{{item.classes.manager_id}}' data-id="{{item.class_id}}" data-name="{{item.classes.name}}">
+              <image class="a-img" src="{{item.classes.main_img_url}}"></image>
+              <text>{{item.classes.name}}</text>
+              <image class="exit-icon" style="display:{{exitStatus}}" bindtap="exitSpace" data-id="{{item.class_id}}" src="/img/home/icon_exit.png"></image>
+              <!-- <view class="prompt">
+                8
+              </view> -->
+            </view>
+          </block>
+          <view class="class-content add_zone" bindtap="add_space">
+            <!-- 添加个人空间 -->
+            <view class="add-icon" bind:tap="onDelUserTab">
+              <image class="img add-img" src="/img/home/space_icon_add.png"></image>
+            </view>
+            <view class="add_A">创建空间</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </l-popup>
+
+  <!--头部空间 邀请 搜索 班级名称-->
+  <view class="header" style="background-image:url({{defaultSpace.classes.bg_img}})">
+    <view class='custom-navbar-top nav-bg' style='height:{{navH+40}}px;'>
+      <view class="showSpaceList" bindtap="showSpaceList">
+        <text class="change-space">切换空间</text>
+        <image class="top-arrow" src="/img/arrow@down.png" mode="widthFix"></image>
+      </view>
+    </view>
+
+    <view class="t_header">
+      <text class="t_title">{{defaultSpace.classes.name}}</text>
+    </view>
+
+    <view class="notify">
+      <view>
+      <image src="/img/icon_yq.png"></image>
+        Hi，送您一张免费券，快来领取！
+      </view>
+    
+    </view>
+
+    <view class="t_bottom">
+
+      <view class="t_left_bottom">
+        <view class="goods-discription" bindtap="invite">
+
+          <l-button bg-color="transparent" speacial open-type="share">
+            <view class="t_button">
+              <image class="top-icon" src="/img/home/icon_visit.png"></image>
+            </view>
+            <text>邀请</text>
+          </l-button>
+
+
+
+        </view>
+
+        <view class="goods-discription" bindtap="spaceControl">
+          <view class="t_button">
+            <image class="top-icon" src="/img/home/icon_space.png"></image>
+          </view>
+          <text>空间管理</text>
+        </view>
+
+        <view class="t_button" bindtap="search">
+          <image class="top-icon" src="/img/home/icon_serach.png"></image>
+        </view>
+      </view>
+
+
+    </view>
+
+  </view>
+
+  <!--图片列表-->
+  <view class="group-content">
+
+    <block wx:if="{{datalist.length > 0}}">
+
+      <view class="onUpImg" bindtap="uploadImg" style="top:{{sHeight-162}}px">
+        <image src="/img/home/img_add.png"></image>
+      </view>
+
+      <l-loadmore show="{{true}}" type="{{loadingType}}" loading-text="努力加载中~">
+
+
+        <view slot="content" wx:for="{{datalist}}" wx:key="index" style="width: 750rpx;background-color: #ffffff;">
+
+          <block wx:if="{{item.video}}">
+
+            <view class="content_top"></view>
+            <view class="content-tops">
+
+              <view class="tops-header">
+                <image class="avatal" src="/img/home/avatal.png"></image>
+                <text class="type-title" style="margin-right: 10rpx;">{{item.user.name}}{{item.user.appellation}}</text>
+                <text class="type-title">{{item.update_time}}</text>
+              </view>
+              <text class="type-description">{{item.description}}</text>
+
+            </view>
+
+            <view class="content-header" bindtap="onVideoList" data-id="{{item.videos.id}}" data-src="{{item.videos[0].video_url}}">
+              <view class="video" wx:for="{{item.videos}}">
+                <view class="mengceng">
+                  <image src="/img/home/play.png"></image>
+                </view>
+                <image src="{{item.thumb}}" mode="aspectFill"></image>
+              </view>
+
+            </view>
+
+            <view class="content-bottom">
+              <view class="bot-l">
+                <image src="../../img/ly.png"></image>
+              </view>
+              <view class="bot-r" bindtap="onVideoList" data-id="{{item.videos.id}}" data-src="{{item.videos[0].video_url}}">
+                <text class="type-title">查看视频</text>
+                <image class="arrow-right" src="/img/arrow@right.png" mode="widthFix"></image>
+              </view>
+            </view>
+
+          </block>
+          <block wx:elif="{{item.images.length === 1}}">
+            <view class="content_top"></view>
+
+            <view class="content-tops">
+
+              <view class="tops-header">
+                <image class="avatal" src="/img/home/avatal.png"></image>
+                <text class="type-title" style="margin-right: 10rpx;">{{item.user.name}}{{item.user.appellation}}</text>
+                <text class="type-title">{{item.update_time}}</text>
+              </view>
+              <text class="type-description">{{item.description}}</text>
+
+            </view>
+
+            <view class="content-header" bindtap="onImgList" data-id="{{item.id}}">
+              <image class="img-one" src="{{item.images[0].img_url}}" mode="aspectFill"></image>
+
+            </view>
+
+            <view class="content-bottom">
+              <view class="bot-l" bindtap="Leave_me" data-id="{{item.id}}" data-index="{{index}}">
+                <image wx:if='{{managerId ==inviteId}}' src="../../img/ly.png"></image>
+              </view>
+              <view class="bot-r" bindtap="onImgList" data-id="{{item.id}}">
+                <text class="type-title">查看相集</text>
+                <image class="arrow-right" src="/img/arrow@right.png" mode="widthFix"></image>
+              </view>
+            </view>
+             <view wx:if='{{Leave_ind==index}}' class="Leave_">
+              <textarea placeholder="评论" bindinput="" auto-focus></textarea>
+              <view>发送</view>
+            </view>
+          </block>
+          <block wx:elif="{{item.images.length === 2}}">
+            <view class="content_top"></view>
+
+            <view class="content-tops">
+
+              <view class="tops-header">
+                <image class="avatal" src="/img/home/avatal.png"></image>
+                <text class="type-title" style="margin-right: 10rpx;">{{item.user.name}}{{item.user.appellation}}</text>
+                <text class="type-title">{{item.update_time}}</text>
+              </view>
+              <text class="type-description">{{item.description}}</text>
+
+            </view>
+
+            <view class="content-header" bindtap="onImgList" data-id="{{item.id}}">
+
+              <view class="img-two">
+                <image mode="aspectFill" src="{{item.images[0].img_url}}"></image>
+                <image mode="aspectFill" src="{{item.images[1].img_url}}"></image>
+              </view>
+
+            </view>
+
+            <view class="content-bottom">
+              <view class="bot-l" bindtap="Leave_me" data-id="{{item.id}}" data-index="{{index}}">
+                <image wx:if='{{managerId ==inviteId}}' src="../../img/ly.png"></image>
+              </view>
+              <view class="bot-r" bindtap="onImgList" data-id="{{item.id}}">
+                <text class="type-title">查看相集</text>
+                <image class="arrow-right" src="/img/arrow@right.png" mode="widthFix"></image>
+              </view>
+
+            </view>
+            <view wx:if='{{Leave_ind==index}}' class="Leave_">
+              <textarea placeholder="评论" bindinput="" auto-focus></textarea>
+              <view>发送</view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class="content_top"></view>
+
+            <view class="content-tops">
+
+              <view class="tops-header">
+                <image class="avatal" src="/img/home/avatal.png"></image>
+                <text class="type-title" style="margin-right: 10rpx;">{{item.user.name}}{{item.user.appellation}}</text>
+                <text class="type-title">{{item.update_time}}</text>
+              </view>
+              <text class="type-description">{{item.description}}</text>
+
+            </view>
+
+            <view class="content-header" bindtap="onImgList" data-id="{{item.id}}">
+              <view class="img-l">
+                <image src="{{item.images[0].img_url}}" mode="aspectFill"></image>
+              </view>
+              <view class="img-r">
+                <image mode="aspectFill" src="{{item.images[1].img_url}}"></image>
+                <image mode="aspectFill" src="{{item.images[2].img_url}}"></image>
+              </view>
+
+            </view>
+
+            <view class="content-bottom">
+              <view class="bot-l" bindtap="Leave_me" data-id="{{item.id}}" data-index="{{index}}">
+                <image wx:if='{{managerId ==inviteId}}' src="../../img/ly.png"></image>
+              </view>
+              <view class="bot-r" bindtap="onImgList" data-id="{{item.id}}">
+                <text class="type-title">查看相集</text>
+                <image class="arrow-right" src="/img/arrow@right.png" mode="widthFix"></image>
+              </view>
+
+            </view>
+             <view wx:if='{{Leave_ind==index}}' class="Leave_">
+              <textarea placeholder="评论" bindinput="" auto-focus></textarea>
+              <view>发送</view>
+            </view>
+          </block>
+
+
+        </view>
+      </l-loadmore>
+
+    </block>
+
+    <block wx:else>
+      <view class="none-image" style="height: {{sHeight}}px; margin-top: -400rpx">
+        <view class="fangkuai" bindtap="uploadImg">
+          <image src="/img/home/icon_add.gif"></image>
+        </view>
+        <text>点我添加照片</text>
+      </view>
+    </block>
+
+  </view>
+  <!-- <view wx:if='{{Leave_inout==true}}' class="Leave_">
+    <textarea placeholder="评论" bindinput="" auto-focus></textarea>
+    <view>发送</view>
+  </view> -->
+</view>
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

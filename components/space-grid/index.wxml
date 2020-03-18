@@ -1,0 +1,30 @@
+
+<view class="container">
+
+    <l-grid l-class="grid" row-num="5" bind:tap="onItemTab" data-id="{{item.id}}">
+        <block wx:if="{{item.user}}" wx:for="{{grid}}" wx:key="index">
+            <l-grid-item key="{{item.user_id}}" slot="{{item.user_id}}">
+                <view class="grid-item">
+                    <image class="img" src="{{item.user.avatar_url}}"></image>
+                    <text class="text">{{item.user.name}}</text>
+                </view>
+            </l-grid-item>
+        </block>
+
+        <l-grid-item key="haha" slot="haha">
+            <view class="grid-item">
+                <button class="add-icon" bind:tap="onInviteTab" open-type="share">
+                    <image class="img add-img" src="/img/home/space_icon_add.png"></image>
+                </button>
+            </view>
+        </l-grid-item>
+
+        <l-grid-item key="gg" slot="gg" wx:if="{{is_manager}}">
+            <view class="add-icon" bind:tap="onDelUserTab">
+                <image class="img add-img add-img_T" src="/img/reo.png"></image>
+            </view>
+        </l-grid-item>
+    </l-grid>
+
+
+</view>

@@ -1,0 +1,16 @@
+<!--components/box-grid/index.wxml-->
+
+<view class="container">
+
+        <l-grid l-class="grid" row-num="4" show-border="{{true}}" style="width: 100%;">
+
+            <block wx:for="{{grid}}" wx:key="index">
+                <l-grid-item key="{{item.img_id}}" slot="{{item.img_id}}" data-src="{{item.image.img_url}}" bind:linitemtap="onItemTab">
+                    <view class="grid-item">
+                        <image mode="aspectFill" class="img" src="{{item.image.img_url}}-thumb"></image>
+                    </view>
+                </l-grid-item>
+            </block>
+        </l-grid>
+
+</view>
